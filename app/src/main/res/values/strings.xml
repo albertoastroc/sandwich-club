@@ -99,7 +99,7 @@
             Shaanxi Province and now widely consumed all over China. The meat is most commonly pork,
             stewed for hours in a soup containing over 20 spices and seasonings. Although it is
             possible to use only a few spices (which many vendors do), the resulting meat is less
-            flavourful.\",\"image\":\"https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Roujiamo.jpg/800px-Roujiamo.jpg\",\"ingredients\":[\"Pork\",\"bread\"]}
+            flavourful.\",\"image\":\"https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Roujiamo.jpg/800px-Roujiamo.jpg\",\"ingredients\":[\"Pork\",\"Bread\"]}
         </item>
         <item>{\"name\":{\"mainName\":\"Shawarma\",\"alsoKnownAs\":[]},\"placeOfOrigin\":\"Middle East,
             Levant\",\"description\":\"Shawarma also spelled shawurma or shawerma, is a Levantine
@@ -110,8 +110,8 @@
             (generally with accompaniments), or as a sandwich or wrap. Shawarma is usually eaten
             with tabbouleh, fattoush, taboon bread, tomato, and cucumber. Toppings include tahini,
             hummus, pickled turnips, and
-            amba.\",\"image\":\"https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Shawarmafood.jpg/800px-Shawarmafood.jpg\",\"ingredients\":[\"Shawarma
-            meat (lamb, chicken, turkey, beef) or shawarma falafel\",\"Pita or wrap
+            amba.\",\"image\":\"https://i2.wp.com/angsarap.net/wp-content/uploads/2010/11/shawarma.jpg\",\"ingredients\":[\"Shawarma
+            meat (lamb, chicken, turkey, beef) or Shawarma falafel\",\"Pita or wrap
             bread\",\"Chopped or shredded vegetables\",\"Pickles\",\"Assorted condiments\"]}
         </item>
         <item>{\"name\":{\"mainName\":\"Vada Pav\",\"alsoKnownAs\":[\"Bombay Burger\",\"Vada
@@ -124,7 +124,7 @@
             restaurants across India. It is also called Bombay Burger in keeping with its origins
             and its resemblance in physical form to a
             burger.\",\"image\":\"https://upload.wikimedia.org/wikipedia/commons/1/15/Vada_Paav-The_Mumbai_Burger.jpg\",\"ingredients\":[\"Deep-fried
-            mashed potato patty\",\"chilli peppers\",\"garlic\",\"ginger\",\"bread bun\"]}
+            mashed potato patty\",\"Chilli peppers\",\"Garlic\",\"Ginger\",\"Bread bun\"]}
         </item>
     </string-array>
 

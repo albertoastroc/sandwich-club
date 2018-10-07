@@ -1,55 +1,59 @@
 package com.udacity.sandwichclub.utils;
 
-import com.udacity.sandwichclub.R;
 import com.udacity.sandwichclub.model.Sandwich;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class JsonUtils {
 
-    public static Sandwich parseSandwichJson(String json) {
+    public static Sandwich parseSandwichJson(String json)  {
 
-        String mainName = "";
-        List<String> alsoKnownAs = null;
-        String placeOfOrigin = "";
-        String description = "";
-        String image = "";
-        List<String> ingredients = null;
+        List<String> alsoKnownAs = new ArrayList<>();
+        List<String> ingredients = new ArrayList<>();
+
+        JSONObject sandwichObject = null;
+        Sandwich sandwich = new Sandwich();
 
         try {
-            JSONObject sandwichObject = new JSONObject(json);
+            sandwichObject = new JSONObject(json);
+
             JSONObject nameObject = sandwichObject.getJSONObject("name");
-            JSONArray alsoKnownAsArray = sandwichObject.getJSONArray("alsoKnownAs");
+            String mainName = nameObject.getString("mainName");
+            JSONArray alsoKnownAsArray = nameObject.getJSONArray("alsoKnownAs");
+
+            String placeOfOrigin = sandwichObject.getString("placeOfOrigin");
+            String description = sandwichObject.getString("description");
+            String image = sandwichObject.getString("image");
             JSONArray ingredientsArray = sandwichObject.getJSONArray("ingredients");
 
-            mainName = nameObject.getString("mainName");
-            placeOfOrigin = sandwichObject.getString("placeOfOrigin");
-            image = sandwichObject.getString("image");
-
-            for (int i = 0; 0 < alsoKnownAsArray.length(); i++){
-                String string = alsoKnownAsArray.getString(i);
-                alsoKnownAs.add(string);
+            //if array not null add array items to it's List
+            if (!(alsoKnownAsArray.isNull(0))){
+                for (int i = 0; i < alsoKnownAsArray.length(); i++) {
+                    String string = alsoKnownAsArray.optString(i);
+                    alsoKnownAs.add(string);
+                }
             }
 
-            for (int i = 0; 0 < ingredientsArray.length(); i++){
-                String string = ingredientsArray.getString(i);
-                ingredients.add(string);
+            if (!(ingredientsArray.isNull(0))){
+                for (int i = 0; i < ingredientsArray.length(); i++) {
+                    String string = ingredientsArray.optString(i);
+                    ingredients.add(string);
+                }
+
             }
 
+            sandwich = new Sandwich(mainName, alsoKnownAs, placeOfOrigin, description, image, ingredients);
+            } catch (JSONException e) {
+                e.printStackTrace();
+        } return sandwich;
 
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
 
-        Sandwich sandwich = new Sandwich(mainName, alsoKnownAs, placeOfOrigin, description, image, ingredients);
-
-        return sandwich;
     }
-
 
 
 }
